@@ -2,62 +2,71 @@
 
 * {
 	font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-
-body{
-    background-image: url("/assets/images/rocketMath.png")
+body {
+	background-image: url('/assets/images/rocketMath.png');
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 0 0;
-    grid-template-areas: 
-        " . . . . . ."
-        " . game game game rocket . "
-        " . game game game rocket . "
-        " truck truck truck truck rocket . "
-        " . . . . . . "
-    ;
-    height: 100vh;
-    width: 100vw;
-    
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 0 0;
+	grid-template-areas:
+		' . . . . . .'
+		' . game game game rocket . '
+		' . game game game rocket . '
+		' truck truck truck truck rocket . '
+		' . . . . . . ';
+	height: 100vh;
+	width: 100vw;
 }
 
-.gamediv{
-    grid-area: game;
-    background-color: bisque;
-    padding: 1rem;
-    border-radius: 15px;
-    
+.gamediv {
+	grid-area: game;
+	background-color: bisque;
+	padding: 1rem;
+	border-radius: 15px;
 }
 
-.innerGameDiv{
-    margin: 5rem 10rem;
+.innerGameDiv {
+	margin: 5rem 10rem;
 }
 
-.rocket{
-    margin:  0 auto;
-    margin-top: 8rem;
-    grid-area: rocket;
-    z-index:  5;
-    height: 80%;
-
+.rocket {
+	margin: 0 auto;
+	margin-top: 8rem;
+	grid-area: rocket;
+	z-index: 5;
+	height: 80%;
 }
 
-.fuel{
-    grid-area: truck;
-    display: flex;
-    margin: 5rem 0 0 0;
-    z-index: 5;
+.fuel {
+	grid-area: truck;
+	display: flex;
+	margin: 5rem 0 0 0;
+	z-index: 5;
 }
 
-.fuelimg{
-    width: 15%;
-    margin: 0 auto;
+.fuelimg {
+	width: 15%;
+	margin: 0 auto;
+}
+
+.animate {
+	animation: rumble 10s infinite alternate;
+	animation: fly 10s;
+}
+
+@keyframes fly {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-1000px);
+	}
 }

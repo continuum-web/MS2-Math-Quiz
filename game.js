@@ -68,3 +68,18 @@ function handleSubmit(e) {
 
 
 }
+
+function checkLogic() {
+  // if you won
+  if (gameState.score === 7) {
+      gameState.score = 0;
+      rocket.classList.add("animate")   
+  }
+
+  // if you lost
+    if (gameState.wrong === 3) {
+        gameState.wrong = 0
+        console.log(gameState.wrong);
+        alert("you lose")
+  }
+}
