@@ -56,7 +56,9 @@ body {
 	width: 15%;
 	margin: 0 auto;
 }
-
+.hidden {
+	display: none;
+}
 .animate {
 	animation: rumble 10s infinite alternate;
 	animation: fly 10s;

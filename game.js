@@ -62,6 +62,7 @@ function handleSubmit(e) {
     } else {
         gameState.wrong++
         score.textContent = `current score is : ${gameState.score}`;
+        alert("wrong")
         displayProblem()
         checkLogic()
     }  
@@ -83,3 +84,4 @@ function checkLogic() {
         alert("you lose")
   }
 }
+
