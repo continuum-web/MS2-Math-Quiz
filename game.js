@@ -39,3 +39,32 @@ function displayProblem() {
 
 }
 displayProblem()
+
+gameForm.addEventListener("submit", handleSubmit)
+
+function handleSubmit(e) {
+    e.preventDefault()
+
+    const q = gameState.currentQuestion
+    if (q.operator == "+") correctAnswer = q.operand1 + q.operand2;
+    if (q.operator == "-") correctAnswer = q.operand1 - q.operand2;
+    if (q.operator == "X") correctAnswer = q.operand1 * q.operand2;
+    
+    if (parseInt(answerInput.value, 10) === correctAnswer) {
+        gameState.score++
+        score.textContent = `current score is : ${gameState.score}`;
+        let randomChild = Math.floor(Math.random() * (trucks.length), 10)
+        
+        trucks[randomChild].classList.add("hidden")
+        displayProblem()
+        checkLogic()
+
+    } else {
+        gameState.wrong++
+        score.textContent = `current score is : ${gameState.score}`;
+        displayProblem()
+        checkLogic()
+    }  
+
+
+}
