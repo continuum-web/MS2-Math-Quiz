@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+	font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("/assets/images/rocketMath.png")
+}
+
+.gamediv{
+    background-color: bisque;
+    padding: 1rem;
+    border-radius: 15px;
+    
+}
+
+.innerGameDiv{
+    margin: 5rem 10rem;
+}
