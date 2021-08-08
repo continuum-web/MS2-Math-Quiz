@@ -9,7 +9,7 @@ let rocket = document.querySelector('.rocket');
 let score = document.querySelector(".score");
 let correctAnswer;
 
-/saves the game state
+//saves the game state
 let gameState = {
     score: 0,
     wrong:0
@@ -27,3 +27,15 @@ function generateProblem() {
         operator: ["+","-","X"][generateNumber(2)]
     }
 }
+
+// function to display and update the problem
+function displayProblem() {
+    gameState.currentQuestion = generateProblem()
+    question.innerHTML = `${gameState.currentQuestion.operand1}` + `${gameState.currentQuestion.operator}` + `${gameState.currentQuestion.operand2}`;
+    score.textContent = `current score is : ${gameState.score}`;
+    answerInput.value = "";
+    answerInput.focus()
+
+
+}
+displayProblem()
