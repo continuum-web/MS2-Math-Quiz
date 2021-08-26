@@ -1,5 +1,5 @@
 
-# Spaaace-Text-Adventure 
+# Maths Quiz 
 
 ---
  In the Project I will create a Maths game in HTML, JavaScript and CSS, the quiz game will randomly generate addition subtraction and multiplication problems, Then game for the player to solve.The game is based on the idea of fueling the rocket. The player will have to answer 6 questions, each question will add fuel to the rocket, once the rocket is fueled it will launch.
@@ -37,7 +37,6 @@ As a site owner I want to provide a challenge for players
 
 ---
 
-
 ## Structure
 
 ---
@@ -50,6 +49,7 @@ This project will be a single page website with user UX and UI being controlled 
 ---
 
 WireFrames documenting the Design process can be found <HERE>, the design has on purposely been left clean and simple, with a single page design, the art style selected is a semi photoreal/cartoon art style
+
 ---
 
 ## Technologies Used
@@ -64,7 +64,6 @@ WireFrames documenting the Design process can be found <HERE>, the design has on
   
 ### Frameworks, Libraries and Resource
 
-- [Sass](https://sass-lang.com/)
 - Google Dev tools: for testing.
 - Lighthouse: for performance and accessability tests
 - Prettier: to beautify code
@@ -77,10 +76,14 @@ WireFrames documenting the Design process can be found <HERE>, the design has on
 
 ---
 
-My plan for testing this site is fairly simple, Once everything is in place  intend on checking the functionality of the site by playing through the game and testing for any issues, This testing will include the buttons, the item frames and text frame to make sure they all have consistent behavior and behavior that falls inline with my user stories.
+My plan for testing this site is fairly simple, Once everything is in place  intend on checking the functionality of the site by playing through the game and testing for any issues, This testing will include the buttons, images  and text to make sure they all have consistent behavior and behavior that falls inline with my user stories.
+
+after this I will pass the project code through the W3C validator and lighthouse in the google dev tools. I will then fix any issues and suggestions these tools present.
 
 ---
 
 ## Deployment
+
+My Project will be deployed using github pages, I will Log in to git hub and access repository for the MileStone Project, from there I will access the settings for the repository and head down to the pages section section and deploy it from there, Once Deployed the site will be available [HERE](https://continuum-web.github.io/MS2-Math-Quiz/)
 
 ---
