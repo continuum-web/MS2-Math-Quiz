@@ -1,5 +1,5 @@
 //bring in the HTML
-let question = document.querySelector(".question");
+let question = document.querySelector("#question");
 let gameForm = document.querySelector(".gameForm");
 let playerAnswer = document.querySelector(".answerInput");
 let answerInput = document.querySelector(".answerInput")
@@ -31,7 +31,7 @@ function generateProblem() {
 // function to display and update the problem
 function displayProblem() {
     gameState.currentQuestion = generateProblem()
-    question.innerHTML = `${gameState.currentQuestion.operand1}` + `${gameState.currentQuestion.operator}` + `${gameState.currentQuestion.operand2}`;
+    question.innerHTML = `${gameState.currentQuestion.operand1}` + `${gameState.currentQuestion.operator}` + `${gameState.currentQuestion.operand2}` + "=";
     score.textContent = `current score is : ${gameState.score}`;
     answerInput.value = "";
     answerInput.focus()

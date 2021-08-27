@@ -9,20 +9,23 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="gamediv">
-				<div class="innerGameDiv">
-					<h1>Rocket Math</h1>
-					<p>answer the questions to launch the rocket</p>
-					<p class="question"></p>
-					<form action="" class="gameForm">
-						<input type="text" class="answerInput" />
-						<button type="submit">Submit</button>
-					</form>
-					<p class="score"></p>
+					<div class="heading ">
+						<h1 id = "heading">Rocket Math</h1>
+					<p id="instructions">Answer the questions to launch the rocket</p>
 				</div>
-			</div>
-
-			<div class="fuel">
+					
+				
+					<p  id="question"></p>
+					<form action="" class="answer ">
+						<input type="text" class="answerInput " />
+						<button type="submit" class="btn">Submit</button>
+					</form>
+			
+					<p class="score"></p>
+			
+			
+			
+			<div class="fuel border">
 				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
 				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
 				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
@@ -30,8 +33,10 @@
 				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
 				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
 			</div>
-			<img class="rocket" src="assets/images/rocket.png" alt="" />
+			<img class="rocket border" src="assets/images/rocket.png" alt="" />
 		</div>
+
+	</div>
 		<script src="game.js"></script>
 	</body>
 </html>
