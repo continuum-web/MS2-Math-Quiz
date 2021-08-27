@@ -9,24 +9,22 @@
 body {
 	background-image: url('assets/images/rocketMath.png');
 }
-.displayMiddle{
-	margin:  0 auto;
+.displayMiddle {
+	margin: 0 auto;
 	align-items: center;
 }
 
-.btn{
+.btn {
 	background: none;
 	font-size: 1.5rem;
 	border: 1px solid black;
-	padding: 20px 20px 15px 15px;	
+	padding: 20px 20px 15px 15px;
 	margin-bottom: 1rem;
 }
 
-.border{
+.border {
 	border: 1px solid black;
 }
-
-
 
 .container {
 	align-items: center;
@@ -39,47 +37,45 @@ body {
 		' . . question answer  rocket . '
 		' . . score . rocket . '
 		' truck truck truck truck rocket . ';
-		
+
 	height: 100vh;
 	width: 100vw;
 }
 
-.heading{
+.heading {
 	grid-area: heading;
 	margin: 5rem auto;
 	font-size: 3rem;
-
 }
 
-#instructions{
+#instructions {
 	font-size: 2rem;
 }
 
-#question{
+#question {
 	grid-area: question;
 	justify-self: right;
 	font-size: 5rem;
 }
 
-.answer{
+.answer {
 	grid-area: answer;
 }
 
-.answerInput{
-	
+.answerInput {
 	width: 50%;
 	height: 200%;
 	background: none;
 	font-size: 4rem;
 }
 
-.score{
+.score {
 	grid-area: score;
 }
 
 .rocket {
 	grid-area: rocket;
-	margin-top:  5rem;
+	margin-top: 5rem;
 	z-index: 5;
 	height: 80%;
 	margin: 0 auto;
@@ -88,7 +84,6 @@ body {
 .fuel {
 	grid-area: truck;
 	display: flex;
-	
 }
 
 .fuelimg {
