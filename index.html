@@ -9,33 +9,34 @@
 	</head>
 	<body>
 		<div class="container">
-					<div class="heading ">
-						<h1 id = "heading">Rocket Math</h1>
-					<p id="instructions">Answer the questions to launch the rocket</p>
-				</div>
+			<div class="heading ">
+				<h1 id = "heading">Rocket Math</h1>
+				<p id="instructions">Answer the questions to launch the rocket</p>
+			</div>
 					
 				
-					<p  id="question"></p>
-					<form action="" class="answer ">
+			<p  id="question"></p>
+					<form action="" class="answer gameForm">
 						<input type="text" class="answerInput " />
 						<button type="submit" class="btn">Submit</button>
 					</form>
-			
-					<p class="score"></p>
-			
-			
-			
+					<p class="score"> current score is <span class="scoreNumber"></span></p>
+					
+				
 			<div class="fuel ">
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
-				<img class="fuelimg" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum1" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum2" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum3" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum4" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum5" src="assets/images/fuel.png" alt="" />
+				<img class="fuelimg" id="fuelNum6" src="assets/images/fuel.png" alt="" />
 			</div>
 			<img class="rocket " src="assets/images/rocket.png" alt="" />
 		</div>
-
+		<div class="wrongModal hidden">
+				Wrong answer, Try again
+				<div class="btn " id="modalButton">Try Again</div>
+		</div>
 	</div>
 		<script src="game.js"></script>
 	</body>

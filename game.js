@@ -7,6 +7,17 @@ let truckdiv = document.querySelector(".fuel");
 let trucks = document.querySelectorAll(".fuelimg");
 let rocket = document.querySelector('.rocket');
 let score = document.querySelector(".score");
+let scoreNumber = document.querySelector(".scoreNumber")
+let wrongAnswerModal = document.querySelector(".wrongModal")
+let modalButton = document.querySelector("#modalButton")
+
+let fuelNum1 = document.querySelector("#fuelNum1")
+let fuelNum2 = document.querySelector("#fuelNum2")
+let fuelNum3 = document.querySelector("#fuelNum3")
+let fuelNum4 = document.querySelector("#fuelNum4")
+let fuelNum5 = document.querySelector("#fuelNum5")
+let fuelNum6 = document.querySelector("#fuelNum6")
+
 let correctAnswer;
 
 
@@ -54,36 +65,47 @@ function handleSubmit(e) {
     
     if (parseInt(answerInput.value, 10) === correctAnswer) {
         gameState.score++
-        score.textContent = `current score is : ${gameState.score}`;
         let randomChild = Math.floor(Math.random() * (trucks.length), 10)
+        truckToRemove = "fuelNum" + gameState.score
+        console.log(truckToRemove);
         
-        trucks[randomChild].classList.add("hidden")
+        truckToRemoveNum = window[truckToRemove]
+        truckToRemoveNum.classList.add("hidden")
         displayProblem()
         checkLogic()
+        
+        
 
     } else {
         gameState.wrong++
-        score.textContent = `current score is : ${gameState.score}`;
-        alert("wrong")
+        wrongAnswerModal.classList.remove("hidden")
+        
+        
         displayProblem()
         checkLogic()
     }  
 
 
 }
+modalButton.addEventListener("click", wrongAnswerPopup)
+function wrongAnswerPopup() {
+    wrongAnswerModal.classList.add("hidden")
+    console.log("some stuff");
+
+ }
 
 function checkLogic() {
   // if you won
-  if (gameState.score === 7) {
+  if (gameState.score === 6) {
       gameState.score = 0;
       rocket.classList.add("animate")   
   }
 
-  // if you lost
-    if (gameState.wrong === 3) {
+   //if you lost
+     if (gameState.wrong === 6) {
         gameState.wrong = 0
-        console.log(gameState.wrong);
-        alert("you lose")
-  }
+         console.log(gameState.wrong);
+         alert("you lose")
+   }
 }
 
