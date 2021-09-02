@@ -124,7 +124,26 @@ body {
 	color: red;
 }
 
+.newGame{
+	z-index: 10;
+	position: absolute;
+	top: 30% ;
+	left: 40% ;
+	padding: 30px;
+	height: 300px;
+	width: 400px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
 #modalButton{
+	margin-top: 5rem;
+	text-align: center;
+	cursor: pointer;
+}
+#newGameButton{
 	margin-top: 5rem;
 	text-align: center;
 	cursor: pointer;

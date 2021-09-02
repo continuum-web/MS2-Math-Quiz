@@ -10,6 +10,8 @@ let score = document.querySelector(".score");
 let scoreNumber = document.querySelector(".scoreNumber")
 let wrongAnswerModal = document.querySelector(".wrongModal")
 let modalButton = document.querySelector("#modalButton")
+let newGameButton = document.querySelector("#newGameButton")
+let newGame = document.querySelector(".newGame")
 
 let fuelNum1 = document.querySelector("#fuelNum1")
 let fuelNum2 = document.querySelector("#fuelNum2")
@@ -24,19 +26,23 @@ let correctAnswer;
 
 //saves the game state
 let gameState = {
+    //used to keep scoure and hide the fuel trucks
     score: 0,
     wrong:0
 }
+
 //generate random Number
 function generateNumber(max) {
     return Math.floor(Math.random() * (max + 1));
 }
 
 //generate the math problem
+    //this function is use gets 2 opperands and an opperator
 function generateProblem() {
     return {
         operand1: generateNumber(10),
         operand2: generateNumber(10),
+        //generate number is also used to pick a random operator from ["+","-","X"]
         operator: ["+","-","X"][generateNumber(2)]
     }
 }
@@ -88,17 +94,24 @@ function handleSubmit(e) {
 
 }
 modalButton.addEventListener("click", wrongAnswerPopup)
+newGameButton.addEventListener("click", newGameFunc)
+
 function wrongAnswerPopup() {
     wrongAnswerModal.classList.add("hidden")
-    console.log("some stuff");
-
- }
+    
+}
+ 
+function newGameFunc() {
+    console.log("stuff here too")
+    window.location.reload();
+}
 
 function checkLogic() {
   // if you won
   if (gameState.score === 6) {
       gameState.score = 0;
-      rocket.classList.add("animate")   
+      rocket.classList.add("animate")
+      newGame.classList.remove("hidden")
   }
 
    //if you lost
