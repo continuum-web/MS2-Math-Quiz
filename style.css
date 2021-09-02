@@ -8,6 +8,7 @@
 }
 body {
 	background-image: url('assets/images/rocketMath.png');
+	background-size: cover;
 }
 .displayMiddle {
 	margin: 0 auto;
@@ -43,11 +44,16 @@ body {
 }
 
 .heading {
+	text-align: center;
 	grid-area: heading;
 	margin: 5rem auto;
 	font-size: 3rem;
 }
+#heading{
+	margin: 0 auto;
+	vertical-align: middle;
 
+}
 #instructions {
 	font-size: 2rem;
 }
@@ -71,11 +77,15 @@ body {
 
 .score {
 	grid-area: score;
+	margin: 0;
+	padding: .5rem;
+	font-size: 1.5rem;
+
 }
 
 .rocket {
 	grid-area: rocket;
-	margin-top: 5rem;
+	margin-top: 10rem;
 	z-index: 5;
 	height: 80%;
 	margin: 0 auto;
@@ -84,11 +94,13 @@ body {
 .fuel {
 	grid-area: truck;
 	display: flex;
+	margin-top: 10rem;
+	margin-left: 5rem;
 }
 
 .fuelimg {
 	width: 15%;
-	margin: 0 0.5rem;
+	 margin: 0 0.5rem;
 }
 .hidden {
 	display: none;

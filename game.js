@@ -9,6 +9,8 @@ let rocket = document.querySelector('.rocket');
 let score = document.querySelector(".score");
 let correctAnswer;
 
+
+
 //saves the game state
 let gameState = {
     score: 0,
