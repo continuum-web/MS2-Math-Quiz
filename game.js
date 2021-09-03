@@ -11,7 +11,9 @@ let scoreNumber = document.querySelector(".scoreNumber")
 let wrongAnswerModal = document.querySelector(".wrongModal")
 let modalButton = document.querySelector("#modalButton")
 let newGameButton = document.querySelector("#newGameButton")
+let newGameButton2 = document.querySelector("#newGameButton2")
 let newGame = document.querySelector(".newGame")
+let lostModal = document.querySelector(".youLost")
 
 let fuelNum1 = document.querySelector("#fuelNum1")
 let fuelNum2 = document.querySelector("#fuelNum2")
@@ -33,7 +35,7 @@ let gameState = {
 
 //generate random Number
 function generateNumber(max) {
-    return Math.floor(Math.random() * (max + 1));
+     return Math.floor(Math.random() * (max + 1));
 }
 
 //generate the math problem
@@ -102,6 +104,7 @@ function handleSubmit(e) {
 // event listners for the modal buttons
 modalButton.addEventListener("click", wrongAnswerPopup)
 newGameButton.addEventListener("click", newGameFunc)
+newGameButton2.addEventListener("click", newGameFunc)
 
 function wrongAnswerPopup() {
     wrongAnswerModal.classList.add("hidden")
@@ -123,7 +126,7 @@ function checkLogic() {
    //if you lost
      if (gameState.wrong === 6) {
         gameState.wrong = 0
-        
+        lostModal.classList.remove("hidden")    
    }
 }
 
