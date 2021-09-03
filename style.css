@@ -171,3 +171,27 @@ body {
 		transform: translateY(-1000px);
 	}
 }
+
+@media screen and (max-width: 1040px) {
+	.rocket {
+	grid-area: rocket;
+	/* margin-top: 10rem; */
+	z-index: 5;
+	height: 50%;
+	margin: 0 auto;
+}
+
+#question {
+	grid-area: question;
+	justify-self: right;
+	font-size: 4rem;
+}
+
+.answerInput {
+	width: 50%;
+	height: 50%;
+	background: none;
+	font-size: 2rem;
+}
+
+}
