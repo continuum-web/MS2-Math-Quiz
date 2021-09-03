@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
+/* some base styling to remove the padding and margin of the page */
 * {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+/* using the body tag to set the background image and sets it to cover the page */
 body {
 	background-image: url('assets/images/rocketMath.png');
 	background-size: cover;
 }
-.displayMiddle {
-	margin: 0 auto;
-	align-items: center;
-}
 
+/* Basic Button Styling for all buttond */
 .btn {
 	background: none;
 	font-size: 1.5rem;
@@ -23,10 +22,7 @@ body {
 	margin-bottom: 1rem;
 }
 
-.border {
-	border: 1px solid black;
-}
-
+/* the main container, this sets the heigh width and other styling of the main container, also impliments the grid */
 .container {
 	align-items: center;
 	display: grid;
@@ -43,38 +39,42 @@ body {
 	width: 100vw;
 }
 
+/* Styles the heading container */
 .heading {
 	text-align: center;
 	grid-area: heading;
 	margin: 5rem auto;
 	font-size: 3rem;
 }
+/* Centers the heading text */
 #heading{
 	margin: 0 auto;
 	vertical-align: middle;
 
 }
+/* increases the font size of the instructions */
 #instructions {
 	font-size: 2rem;
 }
-
+/* formatting the qustion layout */
 #question {
 	grid-area: question;
 	justify-self: right;
 	font-size: 5rem;
 }
 
+/* places the answer div in the right place on the grid */
 .answer {
 	grid-area: answer;
 }
-
+/* formats the look of the input field */
 .answerInput {
 	width: 50%;
 	height: 200%;
 	background: none;
 	font-size: 4rem;
 }
-
+/* places the Score div in the right place on the grid  and the Div*/
 .score {
 	grid-area: score;
 	margin: 0;
@@ -83,6 +83,7 @@ body {
 
 }
 
+/* formats the rocket div/image */
 .rocket {
 	grid-area: rocket;
 	margin-top: 10rem;
@@ -90,25 +91,29 @@ body {
 	height: 80%;
 	margin: 0 auto;
 }
-
+/* formats the fuel div/image */
 .fuel {
 	grid-area: truck;
 	display: flex;
 	margin-top: 10rem;
 	margin-left: 5rem;
 }
-
+/* formats the fuel image */
 .fuelimg {
 	width: 15%;
 	 margin: 0 0.5rem;
 }
+ /* this is used to hide the modals and toggled in the Javascript */
 .hidden {
 	display: none;
 }
+
+/* animates the rocket after the player wins */
 .animate {
 	animation: fly 10s;
 }
 
+/* formats the look of the modals */
 .ModalFont{
 	font-size: 1.5rem;
 }
@@ -156,7 +161,8 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
-
+ 
+/* the keyframes for the rocket animation */
 @keyframes fly {
 	0% {
 		transform: translateY(0);

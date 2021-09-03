@@ -106,15 +106,16 @@ modalButton.addEventListener("click", wrongAnswerPopup)
 newGameButton.addEventListener("click", newGameFunc)
 newGameButton2.addEventListener("click", newGameFunc)
 
+//function used to show a model
 function wrongAnswerPopup() {
     wrongAnswerModal.classList.add("hidden")
     
 }
- 
+ //function to relaod the game on a new game event
 function newGameFunc() {
     window.location.reload();
 }
-
+ //checks the win lose logic
 function checkLogic() {
   // if you won
   if (gameState.score === 6) {

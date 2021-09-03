@@ -14,7 +14,8 @@
 				<p id="instructions">Answer the questions to launch the rocket</p>
 			</div>
 					
-				
+			<!-- this div contains the question elements	 -->
+			
 			<p  id="question"></p>
 					<form action="" class="answer gameForm">
 						<input type="text" class="answerInput " />
@@ -22,7 +23,7 @@
 					</form>
 					<p class="score"> current score is <span class="scoreNumber"></span></p>
 					
-				
+			<!-- loads the fuel image	 -->	
 			<div class="fuel ">
 				<img class="fuelimg" id="fuelNum1" src="assets/images/fuel.png" alt="" />
 				<img class="fuelimg" id="fuelNum2" src="assets/images/fuel.png" alt="" />
@@ -31,16 +32,21 @@
 				<img class="fuelimg" id="fuelNum5" src="assets/images/fuel.png" alt="" />
 				<img class="fuelimg" id="fuelNum6" src="assets/images/fuel.png" alt="" />
 			</div>
+			<!-- this div is the rocket	 -->
 			<img class="rocket " src="assets/images/rocket.png" alt="" />
 		</div>
+
+		<!-- this div contains the modals	 -->
 		<div class="wrongModal hidden">
 				<p class="ModalFont">Wrong answer, Try again</p> 
 				<div class="btn " id="modalButton">Try Again</div>
 		</div>
+		<!-- this div contains the modals	 -->
 		<div class="newGame hidden">
 				<p class="ModalFont">you want to play a New Game</p> 
 				<div class="btn " id="newGameButton">start a new game</div>
 		</div>
+		<!-- this div contains the modals	 -->
 		<div class="youLost hidden">
 				<p class="ModalFont">You answered too many questions wrong! </p>
 				<div class="btn " id="newGameButton2">start a new game</div>
