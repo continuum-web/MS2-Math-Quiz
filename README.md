@@ -101,6 +101,8 @@ My plan for testing this site is fairly simple, Once everything is in place  int
 
 After this I will pass the project code through the W3C validator and lighthouse in the google dev tools. I will then fix any issues and suggestions these tools present.
 
+
+
 ---
 
 ## Deployment

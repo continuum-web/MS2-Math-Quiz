@@ -56,55 +56,55 @@ function displayProblem() {
     score.textContent = `current score is : ${gameState.score}`;
     answerInput.value = "";
     answerInput.focus()
-
-
 }
+
 displayProblem()
 // handles the game input submittion
 gameForm.addEventListener("submit", handleSubmit)
 function handleSubmit(e) {
-    e.preventDefault()
-    //checks for the operator and gets the correct answer
-    const q = gameState.currentQuestion
-    if (q.operator == "+") correctAnswer = q.operand1 + q.operand2;
-    if (q.operator == "-") correctAnswer = q.operand1 - q.operand2;
-    if (q.operator == "X") correctAnswer = q.operand1 * q.operand2;
-    // this if statement checks if the user, has entered the correct answer
-    if (parseInt(answerInput.value, 10) === correctAnswer) {
-        //if the correct answeris entered add one to the game store
-        gameState.score++
-        //generates a string with "fuelNum" and the score.
-        truckToRemove = "fuelNum" + gameState.score
-        //converts the truck to remove
-        truckToRemoveNum = window[truckToRemove]
-        //removes a fuel truck image
-        truckToRemoveNum.classList.add("hidden")
-        //displays a new problem
-        displayProblem()
-        //checks game score  if its over six the player wins
-        checkLogic()
+        e.preventDefault()
+        //checks for the operator and gets the correct answer
+        const q = gameState.currentQuestion
+        if (q.operator == "+") correctAnswer = q.operand1 + q.operand2;
+        if (q.operator == "-") correctAnswer = q.operand1 - q.operand2;
+        if (q.operator == "X") correctAnswer = q.operand1 * q.operand2;
+        // this if statement checks if the user, has entered the correct answer
+        if (parseInt(answerInput.value, 10) === correctAnswer) {
+            //if the correct answeris entered add one to the game store
+            gameState.score++
+            //generates a string with "fuelNum" and the score.
+            truckToRemove = "fuelNum" + gameState.score
+            //converts the truck to remove
+            truckToRemoveNum = window[truckToRemove]
+            //removes a fuel truck image
+            truckToRemoveNum.classList.add("hidden")
+            //displays a new problem
+            displayProblem()
+            //checks game score  if its over six the player wins
+            checkLogic()
         
         
 
-    } else {
-        // if the player is wrong, we increase a "wrong" count used to deternim lose
-        gameState.wrong++
-        //onWrong andswer, gives the player feed back
-        wrongAnswerModal.classList.remove("hidden")
+        } else {
+            // if the player is wrong, we increase a "wrong" count used to deternim lose
+            gameState.wrong++
+            //onWrong andswer, gives the player feed back
+            wrongAnswerModal.classList.remove("hidden")
         
-        //displays a new problem
-        displayProblem()
-        //checks game score  if its over six the player wins
-        checkLogic()
-    }  
+            //displays a new problem
+            displayProblem()
+            //checks game score  if its over six the player wins
+            checkLogic()
+        }
 
-
+    
 }
 
 // event listners for the modal buttons
 modalButton.addEventListener("click", wrongAnswerPopup)
 newGameButton.addEventListener("click", newGameFunc)
 newGameButton2.addEventListener("click", newGameFunc)
+
 
 //function used to show a model
 function wrongAnswerPopup() {

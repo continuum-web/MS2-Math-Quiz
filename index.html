@@ -17,8 +17,8 @@
 			<!-- this div contains the question elements	 -->
 			
 			<p  id="question"></p>
-					<form action="" class="answer gameForm">
-						<input type="text" class="answerInput " />
+					<form class="answer gameForm">
+						<input pattern = "/^[0-9]+$/" type="text" class="answerInput " />
 						<button type="submit" class="btn">Submit</button>
 					</form>
 					<p class="score"> current score is <span class="scoreNumber"></span></p>
@@ -51,7 +51,6 @@
 				<p class="ModalFont">You answered too many questions wrong! </p>
 				<div class="btn " id="newGameButton2">start a new game</div>
 		</div>
-	</div>
 		<script src="game.js"></script>
 	</body>
 </html>
