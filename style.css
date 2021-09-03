@@ -93,6 +93,7 @@ body {
 }
 /* formats the fuel div/image */
 .fuel {
+	z-index: 6;
 	grid-area: truck;
 	display: flex;
 	margin-top: 10rem;
@@ -193,5 +194,35 @@ body {
 	background: none;
 	font-size: 2rem;
 }
+
+.btn {
+	background: none;
+	font-size: 1rem;
+	border: 1px solid black;
+	padding: 20px 20px 15px 15px;
+	
+}
+
+
+}
+
+@media screen and (max-width: 763px) {
+.fuel{
+	display: none;
+}
+
+#question {
+	grid-area: question;
+	justify-self: right;
+	font-size: 2.5rem;
+}
+
+.answerInput {
+	width: 50%;
+	height: 50%;
+	background: none;
+	font-size: 1.5rem;
+}
+
 
 }
